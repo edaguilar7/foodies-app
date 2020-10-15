@@ -1,0 +1,65 @@
+@import 'variables';
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin wideScreen {
+    @media (max-width: $wideScreen) {
+        @content;
+    }
+}
+
+@mixin displayFlex($justify: center, $align: center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin sideBarItem($top: 0px, $right: 0px, $height: 0px) {
+    background: getColor( 'secondary' );
+    height: $height;
+    width: 28px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin title() {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: 'Druk Text Wideuk', sans-serif;
+
+    @include tablet {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @include mobile {
+        font-size: 35px;
+        line-height: 35px;
+    }
+}

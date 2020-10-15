@@ -1,0 +1,16 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+
+@include title;
+
+// .dark {
+//     color: getColor('primary');
+// }
+
+// .light {
+//     color: getColor('secondary');
+//     ::after {
+//         content: ''
+//     }
+// }

@@ -1,0 +1,3 @@
+@function getColor($propName) {
+    @return map-get($map: $font-colors, $key:$propName );
+}

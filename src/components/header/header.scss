@@ -1,0 +1,129 @@
+@import '../../assets/styles/mixins';
+@import '../../assets//styles/functions';
+
+.menu {
+    @include displayFlex(flex-start, center, row);
+    position: relative;
+    top: 20px;
+    z-index: 100;
+    overflow-x: hidden;
+
+    #{&}__main {
+        width: 148px;
+        height: 100%;
+        margin-left: 75px;
+        margin-right: 55px;
+        font-size: 27px;
+        cursor: pointer;
+
+        @include tablet {
+            margin-left: 20px;
+        }
+    }
+
+    #{&}__options {
+        list-style: none;
+        @include displayFlex(flex-start, center, row);
+        padding: 0;
+        margin: 0;
+    }
+
+    #{&}__item {
+        @include displayFlex(center, center, row); 
+        margin: 0.2em 1.2em;
+        font-family: 'Syne', sans-serif;
+        line-height: 21.6px;
+        font-weight: 800;
+        font-size: 18px;
+        font-style: normal;
+        cursor: pointer;
+
+        @include tablet{
+            visibility: hidden;
+        };
+    }
+
+    #{&}__sideBar {
+        display: none;
+        background: getColor( 'secondary' );
+        @include sideBarItem(24px, 30px, 3.25px);
+
+        &::before {
+            content: '';
+            @include sideBarItem(-5px, 0px, 3px);
+            @include transition-ease;
+        }
+
+        &::after {
+            content: '';
+            @include sideBarItem(6px, 0px, 3px);
+            @include transition-ease;
+        }
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    
+    &.open {
+        @include tablet {
+            @include displayFlex(flex-start, flex-start, column);
+            height: 95vh;
+            top: 0px;
+            background-color: getColor( 'primary' );
+            border-radius: 0 0 30px 30px;
+
+            .menu__main {
+                height: auto;
+                margin-top: 30px;
+            }
+    
+            .menu__options {
+                @include displayFlex(center, center, column);
+                width: 100%;
+                margin-top: 20px;
+            }
+    
+            .menu__item {
+                margin: 1em auto;
+                margin-left: 20px;
+                text-align: left;
+                visibility: visible;
+            }
+
+            .menu__sideBar {
+                margin-top: 20px;
+                transform: rotate(720deg);
+                background: transparent;
+        
+                &:before {
+                    transform: rotate(45deg) translate(0px, 7px);
+                }
+        
+                &:after {
+                    transform: rotate(-45deg) translate(0px, -8px);
+                }
+            }
+        }
+    }
+}
+
+.drop {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    max-width: 935px;
+    max-height: 1021px;
+
+    @include tablet {
+        max-height: 650px;
+        max-width: 595px;
+    }
+
+    @include mobile {
+        max-height: 100%;
+        width: 100%;
+    }
+}

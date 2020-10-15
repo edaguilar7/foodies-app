@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins';
+
+.landing-info {
+    overflow: hidden;
+    padding-top: 50px;
+    @include displayFlex(center, stretch, row);
+
+    
+    #{&}__picture-box, #{&}__marketing {
+        @include displayFlex(center, center, row);
+        width: 50%;
+        position: relative;
+        z-index: 60;
+    }
+
+    #{&}__marketing {
+        @include displayFlex(center, center, column);
+        max-width: 400px;
+    }
+
+    @include tablet {
+        #{&}__picture{
+            max-width: 312px;
+        }
+    }
+
+    @include mobile {
+        @include displayFlex(center, center, column);
+        #{&}__picture-box {
+            width: 95%;
+            margin: auto;
+            order: 1;
+        }
+
+        #{&}__marketing {
+            width: 95%;
+            margin: auto;
+            order: 2;
+        }
+    }
+}
