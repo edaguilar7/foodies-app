@@ -1,0 +1,65 @@
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.about-us {
+    @include displayFlex(center, stretch, row);
+    width: 100%;
+    max-height: 565px;
+    margin-top: 475px;
+    position: relative;
+    z-index: 70;
+
+    #{&}__aside {
+        width: 60%;
+        height: 565px;
+        background: url('../../assets/img/friends.jpg') rgba(0,0,0,0.5);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include displayFlex(flex-end, flex-end, column);
+    }
+
+    #{&}__descriptions {
+        width: 40%;
+        background-image: url('../../assets/img/curly.svg');
+        background-position: 0% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include displayFlex(center, center, column);
+    }
+    
+    #{&}__aside-text {
+        font-family: Druk Text Wide;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 50px;
+        text-align: right;
+        margin-right: 40px;
+        color: getColor( 'primary' );
+        width: 100%;
+    }
+    
+    #{&}__aside-text--terciary {
+        @extend .about-us__aside-text;
+        color: getColor( 'terciary' );
+        margin-bottom: 30px;
+    }
+
+    @include tablet {
+        margin-top: 260px;
+        @include displayFlex(center, center, column);
+        #{&}__aside, #{&}__descriptions {
+            width: 100%;
+            margin-top: 0px;
+        }
+        #{&}__descriptions {
+            margin-top: 30px;
+            background-size: 100% 100%;
+
+        }
+    }
+    
+    @include mobile {
+        margin-top: 0px;
+    }
+}

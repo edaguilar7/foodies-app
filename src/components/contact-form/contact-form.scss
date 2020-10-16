@@ -1,0 +1,87 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.contact-form {
+    width: 80%;
+    @include displayFlex(space-between, stretch, row);
+    flex-wrap: wrap;
+
+    #{&}__left {
+        width: 30%;
+        @include displayFlex(center, flex-start, column);
+    }
+
+    #{&}__right {
+        width: 65%;
+    }
+
+    #{&}__bottom {
+        width: 97%;
+        @include displayFlex(flex-end, center, row);
+
+        & > button {
+            color: getColor( 'secondary' ) !important;
+            font-weight: bold;
+            background: getColor( 'golden' ) !important;
+            border: solid 1px getColor( 'secondary' );
+            margin: 0.5em 0;
+            outline: none;
+            &:focus, &:active, &:hover {
+                border-color: lighten(getColor( 'golden' ), 5%) !important;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px lighten(getColor( 'golden' ), 10%) !important;
+            }
+        }
+
+        @include tablet {
+            @include displayFlex(center, center, row);
+        }
+    }
+
+    .form-group {
+        width: 95%;
+        padding: 0;
+        margin: 0.3em 0;
+
+        & > .form-label {
+            margin: 0;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            color: getColor( 'golden' );
+        }
+
+        & > .form-control {
+            color: getColor( 'golden' );
+            background: getColor( 'secondary' );
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            &:focus {
+                border: solid 1px lighten(getColor( 'golden' ), 5%);
+                box-shadow: none;
+            }
+        }
+    }
+
+    @include tablet {
+        @include displayFlex(center, center, column);
+        #{&}__left {
+            width: 100%;
+            @include displayFlex(center, center, column);
+        }
+    
+        #{&}__right {
+            width: 100%;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+    }
+}

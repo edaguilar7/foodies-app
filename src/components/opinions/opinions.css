@@ -1,0 +1,138 @@
+.opinions {
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.opinions .opinions__left-drop {
+  max-width: 316.57px;
+  height: 555.29px;
+  position: absolute;
+  left: 0px;
+  z-index: 40;
+}
+
+.opinions .opinions__right-drop {
+  max-width: 223.76px;
+  height: 546.41px;
+  position: absolute;
+  right: 0px;
+  top: 90px;
+  z-index: 40;
+}
+
+.opinions .opinions__ketchup {
+  width: 400px;
+  height: 662.27px;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  z-index: 50;
+}
+
+.opinions .opinions__actions {
+  min-width: 75px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opinions .opinions__actions > label {
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.opinions .opinions__actions > button {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.opinions .opinions__actions > button:nth-child(3) > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.opinions .opinions__actions > button > .limit {
+  cursor: no-drop;
+}
+
+.opinions .opinions__actions > button > .limit > img {
+  -webkit-filter: invert(80%) brightness(95%) sepia(0.6) contrast(36%) hue-rotate(40deg);
+          filter: invert(80%) brightness(95%) sepia(0.6) contrast(36%) hue-rotate(40deg);
+}
+
+.opinions .opinions__carousel-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  top: 200px;
+  margin: 1em auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .opinions .opinions__carousel-box {
+    top: 0px;
+  }
+}
+
+.opinions .opinions__carousel {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .opinions .opinions__carousel-box {
+    top: 125px;
+  }
+  .opinions .opinions__left-drop {
+    max-width: 251.21px;
+    height: 443.05px;
+  }
+  .opinions .opinions__right-drop {
+    max-width: 299px;
+    height: 482px;
+    top: 120px;
+  }
+  .opinions .opinions__ketchup {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .opinions {
+    margin-top: 20px;
+  }
+  .opinions .opinions__carousel-box {
+    top: 0px;
+  }
+  .opinions .opinions__left-drop, .opinions .opinions__right-drop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=opinions.css.map */

@@ -1,0 +1,54 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+
+.branch-card {
+    width: 100%;
+    @include displayFlex(flex-start, flex-start, column );
+    border: 1px solid #000000;
+    border-radius: 4px;
+    max-height: 110px;
+    margin: 0.5em auto;
+
+    #{&}__name, #{&}__schedule, #{&}__location {
+        @include reset;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        margin-left: 20px;
+    }
+
+    #{&}__name {
+        font-family: Syne;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: getColor( 'secondary' );
+        margin-top: 0.5em;
+    }
+
+    #{&}__schedule, #{&}__location {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: getColor( 'secondary' );
+    }
+
+    #{&}__location {
+        margin-bottom: 0.5em;
+    }
+
+    &--active {
+        background: getColor('light');
+        border-color: getColor('light');
+    }
+
+    @include tablet {
+        #{&}__name, #{&}__schedule, #{&}__location {
+            margin-left: 10px;
+        }
+    }
+}

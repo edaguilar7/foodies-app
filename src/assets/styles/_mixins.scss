@@ -51,7 +51,7 @@
     font-style: normal;
     font-size: 60px;
     line-height: 60px;
-    font-family: 'Druk Text Wideuk', sans-serif;
+    font-family: 'Inter', sans-serif;
 
     @include tablet {
         font-size: 40px;
@@ -62,4 +62,9 @@
         font-size: 35px;
         line-height: 35px;
     }
+}
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
 }

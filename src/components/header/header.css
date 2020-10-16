@@ -12,17 +12,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
   position: relative;
   top: 20px;
   z-index: 100;
-  overflow-x: hidden;
 }
 
 .menu .menu__main {
+  padding: 0;
+  margin: 0;
   width: 148px;
   height: 100%;
+  display: inline-block;
   margin-left: 75px;
-  margin-right: 55px;
+  margin-right: 0px;
   font-size: 27px;
   cursor: pointer;
 }
@@ -66,7 +69,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0.2em 1.2em;
+  margin: 0.2em 0.6em;
   font-family: 'Syne', sans-serif;
   line-height: 21.6px;
   font-weight: 800;
@@ -90,7 +93,7 @@
   cursor: pointer;
   font-weight: bold;
   position: absolute;
-  top: 24px;
+  top: 17px;
   right: 30px;
 }
 
@@ -102,7 +105,7 @@
   cursor: pointer;
   font-weight: bold;
   position: absolute;
-  top: -5px;
+  top: -5.5px;
   right: 0px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -116,7 +119,7 @@
   cursor: pointer;
   font-weight: bold;
   position: absolute;
-  top: 6px;
+  top: 5.5px;
   right: 0px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -196,21 +199,22 @@
   right: 0;
   top: 0;
   z-index: 10;
-  max-width: 935px;
-  max-height: 1021px;
+  width: 935.24px;
+  height: 1021.04px;
 }
 
 @media (max-width: 1024px) {
   .drop {
-    max-height: 650px;
-    max-width: 595px;
+    width: 595.38px;
+    height: 650px;
   }
 }
 
 @media (max-width: 768px) {
   .drop {
-    max-height: 100%;
-    width: 100%;
+    max-width: 100%;
+    width: 455px;
+    height: 497px;
   }
 }
 /*# sourceMappingURL=header.css.map */

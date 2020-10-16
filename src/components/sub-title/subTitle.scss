@@ -1,0 +1,56 @@
+@import '../../assets/styles/mixins';
+@import '../../assets//styles/variables';
+@import '../../assets//styles/functions';
+
+.sub-title {
+    @include reset;
+    @include displayFlex(flex-start, center, row);
+    font-family: Syne;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: getColor( 'secondary' );
+    
+    #{&}__arrow {
+        @include reset;
+        position: relative;
+        background: lighten(getColor( 'secondary' ), 10%);
+        border-radius: 10px;
+        height: 3px;
+        width: 25px;
+        margin-left: 10px;
+        display: block;
+        color: inherit;
+
+        &::before {
+            content: '';
+            @include reset;
+            background: lighten(getColor( 'secondary' ), 10%);
+            border-radius: 10px;
+            height: 3px;
+            width: 15px;
+            display: block;
+            color: inherit;
+            position: absolute;
+            left: 12px;
+            top: -4px;
+            transform: rotate(215deg);
+        }
+
+        &::after {
+            content: '';
+            @include reset;
+            background: lighten(getColor( 'secondary' ), 10%);
+            border-radius: 10px;
+            height: 3px;
+            width: 15px;
+            display: block;
+            color: inherit;
+            position: absolute;
+            left: 12.4px;
+            top: 4.7px;
+            transform: rotate(-45deg);
+        }
+    }
+}

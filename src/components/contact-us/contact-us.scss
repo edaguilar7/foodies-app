@@ -1,0 +1,17 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.contact-us {
+    @include displayFlex(center, center, column);
+    width: 100%;
+    padding-top: 90px;
+    position: relative;
+    top: 320px;
+    background: getColor( 'secondary' );
+    color: getColor( 'primary' );
+
+    @include mobile {
+        top: 0;
+    }
+}

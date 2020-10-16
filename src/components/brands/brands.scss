@@ -1,0 +1,78 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.brands {
+    margin-top: 20px;
+    width: 100%;
+    @include displayFlex(space-between, stretch, row);
+
+    #{&}__items {
+        width: 55%;
+        @include displayFlex(center, center, column);
+    }
+
+    #{&}__title {
+        font-family: Druk Text Wide;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+        color: #000000;
+    }
+
+    #{&}__cards {
+        width: 95%;
+        margin-right: 0%;
+        @include displayFlex(center, center, column);
+
+        @include tablet {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    
+    #{&}__map {
+        width: 40%;
+        height: 609;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    /** Tabs **/
+    .nav-tabs {
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        height: 64px;
+        @include displayFlex(center, center, row);
+        color: getColor( 'secondary' );
+        background-color: getColor( 'primary' );
+    }
+
+    .nav-item.active {
+        color: getColor( 'primary' );
+        background-color: getColor( 'secondary' );
+    }
+
+    @include tablet {
+        @include displayFlex(center, center, column);
+        #{&}__items, #{&}__map {
+            width: 100%;
+        }
+
+        #{&}__cards { 
+            margin-top: 15px;
+        }
+    }
+
+    @include mobile {
+        #{&}__map {
+            display: none;
+        }
+    }
+}

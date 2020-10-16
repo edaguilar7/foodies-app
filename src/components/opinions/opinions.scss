@@ -1,0 +1,114 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.opinions {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    
+    #{&}__left-drop {
+        max-width: 316.57px;
+        height: 555.29px;
+        position: absolute;
+        left: 0px;
+        z-index: 40;
+    }
+
+    #{&}__right-drop {
+        max-width: 223.76px;
+        height: 546.41px;
+        position: absolute;
+        right: 0px;
+        top: 90px;
+        z-index: 40;
+    }
+
+    #{&}__ketchup {
+        width: 400px;
+        height: 662.27px;
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        z-index: 50;
+    }
+
+    #{&}__actions {
+        min-width: 75px;
+        margin-top: 40px;
+        @include displayFlex(space-between, center, row);
+        & > label {
+            height: 20px;
+            @include reset;
+        }
+
+        & > button {
+            @include reset;
+            outline: 0;
+            border: none;
+            background-color: transparent;
+            &:nth-child(3) {
+                & > img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        & > button > .limit {
+            cursor: no-drop;
+            & > img {
+                filter: invert(80%) brightness(95%) sepia(0.6) contrast(36%) hue-rotate(40deg)
+            }
+        }
+    }
+
+    #{&}__carousel-box {
+        @include displayFlex(center, center, column);
+        width: 60%;
+        top: 200px;
+        margin: 1em auto;
+        position: relative;
+
+        @include mobile {
+            top: 0px;
+        }
+    }
+
+    #{&}__carousel {
+        width: 100%;
+    }
+
+    @include tablet {
+
+        #{&}__carousel-box {
+            top: 125px;
+        }
+
+        #{&}__left-drop {
+            max-width: 251.21px;
+            height: 443.05px;
+        }
+
+        #{&}__right-drop {
+            max-width: 299px;
+            height: 482px;
+            top: 120px;
+        }
+
+        #{&}__ketchup {
+            display: none;
+        }
+    }
+
+    @include mobile {
+
+        #{&}__carousel-box {
+            top: 0px;
+        }
+        
+        margin-top: 20px;
+        #{&}__left-drop, #{&}__right-drop {
+            display: none;
+        }
+    }
+}

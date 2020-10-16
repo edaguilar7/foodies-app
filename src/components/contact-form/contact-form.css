@@ -1,0 +1,163 @@
+.contact-form {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-form .contact-form__left {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact-form .contact-form__right {
+  width: 65%;
+}
+
+.contact-form .contact-form__bottom {
+  width: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-form .contact-form__bottom > button {
+  color: #000 !important;
+  font-weight: bold;
+  background: #FFC700 !important;
+  border: solid 1px #000;
+  margin: 0.5em 0;
+  outline: none;
+}
+
+.contact-form .contact-form__bottom > button:focus, .contact-form .contact-form__bottom > button:active, .contact-form .contact-form__bottom > button:hover {
+  border-color: #ffcd1a !important;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #ffd233 !important;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #ffd233 !important;
+}
+
+@media (max-width: 1024px) {
+  .contact-form .contact-form__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.contact-form .form-group {
+  width: 95%;
+  padding: 0;
+  margin: 0.3em 0;
+}
+
+.contact-form .form-group > .form-label {
+  margin: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFC700;
+}
+
+.contact-form .form-group > .form-control {
+  color: #FFC700;
+  background: #000;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contact-form .form-group > .form-control:focus {
+  border: solid 1px #ffcd1a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  .contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-form .contact-form__left {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-form .contact-form__right {
+    width: 100%;
+  }
+  .contact-form .form-group {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=contact-form.css.map */

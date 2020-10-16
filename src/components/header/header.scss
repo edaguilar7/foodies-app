@@ -3,16 +3,18 @@
 
 .menu {
     @include displayFlex(flex-start, center, row);
+    overflow-x: hidden;
     position: relative;
     top: 20px;
     z-index: 100;
-    overflow-x: hidden;
-
+    
     #{&}__main {
+        @include reset;
         width: 148px;
         height: 100%;
+        display: inline-block;
         margin-left: 75px;
-        margin-right: 55px;
+        margin-right: 0px;
         font-size: 27px;
         cursor: pointer;
 
@@ -30,7 +32,7 @@
 
     #{&}__item {
         @include displayFlex(center, center, row); 
-        margin: 0.2em 1.2em;
+        margin: 0.2em 0.6em;
         font-family: 'Syne', sans-serif;
         line-height: 21.6px;
         font-weight: 800;
@@ -46,17 +48,17 @@
     #{&}__sideBar {
         display: none;
         background: getColor( 'secondary' );
-        @include sideBarItem(24px, 30px, 3.25px);
+        @include sideBarItem(17px, 30px, 3.25px);
 
         &::before {
             content: '';
-            @include sideBarItem(-5px, 0px, 3px);
+            @include sideBarItem(-5.5px, 0px, 3px);
             @include transition-ease;
         }
 
         &::after {
             content: '';
-            @include sideBarItem(6px, 0px, 3px);
+            @include sideBarItem(5.5px, 0px, 3px);
             @include transition-ease;
         }
 
@@ -114,16 +116,17 @@
     right: 0;
     top: 0;
     z-index: 10;
-    max-width: 935px;
-    max-height: 1021px;
+    width: 935.24px;
+    height: 1021.04px;
 
     @include tablet {
-        max-height: 650px;
-        max-width: 595px;
+        width: 595.38px;
+        height: 650px;
     }
 
     @include mobile {
-        max-height: 100%;
-        width: 100%;
+        max-width: 100%;
+        width: 455px;
+        height: 497px;
     }
 }

@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 const Title = ({ 
     theme,
-    fontSize, 
+    style, 
     text 
 }) => (
         <h1 
-            {...fontSize && { style: { fontSize } }} 
+            {...style && { style } } 
             className={`custom-title custom-title--${theme === 'dark' ? 'dark' : 'light'} : ''}`}
         >
             { text }
@@ -17,7 +17,7 @@ const Title = ({
 
 Title.propTypes = {
     theme: PropTypes.string,
-    fontSize: PropTypes.string,
+    style: PropTypes.object,
     text: PropTypes.string.isRequired
 }
 

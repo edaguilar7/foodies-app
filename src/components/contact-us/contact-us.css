@@ -1,0 +1,28 @@
+.contact-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 90px;
+  position: relative;
+  top: 320px;
+  background: #000;
+  color: #FFF;
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    top: 0;
+  }
+}
+/*# sourceMappingURL=contact-us.css.map */

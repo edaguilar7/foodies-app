@@ -1,0 +1,63 @@
+.branch-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  max-height: 110px;
+  margin: 0.5em auto;
+}
+
+.branch-card .branch-card__name, .branch-card .branch-card__schedule, .branch-card .branch-card__location {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  margin-left: 20px;
+}
+
+.branch-card .branch-card__name {
+  font-family: Syne;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin-top: 0.5em;
+}
+
+.branch-card .branch-card__schedule, .branch-card .branch-card__location {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+}
+
+.branch-card .branch-card__location {
+  margin-bottom: 0.5em;
+}
+
+.branch-card--active {
+  background: #FFF1BF;
+  border-color: #FFF1BF;
+}
+
+@media (max-width: 1024px) {
+  .branch-card .branch-card__name, .branch-card .branch-card__schedule, .branch-card .branch-card__location {
+    margin-left: 10px;
+  }
+}
+/*# sourceMappingURL=branch_card.css.map */
