@@ -15,6 +15,7 @@
       -ms-flex-align: stretch;
           align-items: stretch;
   /** Tabs **/
+  /** Inputs **/
 }
 
 .brands .brands__items {
@@ -46,6 +47,7 @@
 .brands .brands__cards {
   width: 95%;
   margin-right: 0%;
+  min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,6 +105,25 @@
 .brands .nav-item.active {
   color: #FFF;
   background-color: #000;
+}
+
+.brands .brands__search {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-left: none;
+}
+
+.brands .input-addon {
+  background: #FFF;
+}
+
+.brands .input-addon, .brands .input-search {
+  border-left: none;
+  border-right: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 @media (max-width: 1024px) {

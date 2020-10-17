@@ -1,6 +1,6 @@
 import React from 'react';
 import './landingInfo.css';
-import { Title, Paragraph } from '../index';
+import { Title, Paragraph, SubTitle } from '../index';
 import Hamburger from '../../assets/img/hamburger.svg';
 
 const LandingInfo = () => {
@@ -14,6 +14,12 @@ const LandingInfo = () => {
                 />
                 <Paragraph
                     text={'Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables.'}
+                />
+
+                <SubTitle
+                    hasArrow
+                    style={{ width: '100%', marginTop: '50px' }}
+                    text={'Encuentranos'} 
                 />
             </div>
             <div className="landing-info__picture-box">

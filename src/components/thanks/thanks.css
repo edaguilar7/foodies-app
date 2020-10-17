@@ -1,0 +1,48 @@
+.thanks {
+  width: 715px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em auto;
+}
+
+.thanks .thanks__picture {
+  max-width: 100px;
+}
+
+.thanks .thanks__title {
+  font-family: Druk Text Wide;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFF;
+}
+
+.thanks .thanks__description {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFF;
+}
+
+@media (max-width: 768px) {
+  .thanks {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=thanks.css.map */

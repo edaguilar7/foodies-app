@@ -1,0 +1,47 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+.benefit {
+    max-width: 298px;
+    margin: 0.7em;
+    @include displayFlex(center, center, column);
+
+    #{&}__number {
+        @include displayFlex(center, center, column);
+        margin: 0.2em auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: getColor( 'terciary' );
+        color: getColor( 'primary' ); 
+        font-size: 22px;
+    }
+
+    #{&}__title {
+        margin: 0.2em auto;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+
+        color: #000000;   
+    }
+
+    #{&}__description {
+        margin: 0.2em auto;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    @include mobile {
+        margin: auto;
+    }
+}

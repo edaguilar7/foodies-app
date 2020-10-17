@@ -1,19 +1,29 @@
 import React from 'react';
-import { GoogleMap, Marker, withGoogleMap } from "react-google-maps"
+import { Map as GoogleMap, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-const Map = ({ isMarkerShown, position }) => {
+const Map = ({ isMarkerShown, position, google }) => {
 
-    const { lat = -34.397, lng = 150.644  } = position || { };
     return (
         <GoogleMap
-            key={'AIzaSyByGZOo09v4DtgdVsEwudHzF_O_6QtC4LY'}
-            defaultZoom={8}
-            defaultCenter={{ lat, lng }}
+            google={google} zoom={9.2}
+            initialCenter={{
+                lat: 13.695,
+                lng: -88.950
+            }}
+            onClick={() => console.log('Cerrando')}
+            className='mapaComp'
         >
-            {isMarkerShown && <Marker position={{ lat, lng }} />}
+            {/* <InfoWindow
+                marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div>
+                    <h1>{this.state.selectedPlace.name}</h1>
+                </div>
+            </InfoWindow> */}
         </GoogleMap>
     )
 }
 
-export default withGoogleMap(Map)
-// key: 'AIzaSyByGZOo09v4DtgdVsEwudHzF_O_6QtC4LY'
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyByGZOo09v4DtgdVsEwudHzF_O_6QtC4LY'
+})(Map)

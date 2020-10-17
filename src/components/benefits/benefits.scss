@@ -1,0 +1,75 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.benefits {
+    width: 100%;
+    position: relative;
+    top: 350px;
+    #{&}__picture {
+        position: absolute;
+        top: -110px;
+        z-index: 1;
+
+        @include mobile {
+            top: -375px;
+        }
+    }
+
+    #{&}__info {
+        @include displayFlex(center, center, column);
+        position: relative;
+        margin-left: 40%;
+        width: 55%;
+        align-self: flex-end;
+
+        @include tablet {
+            width: 100%;
+            top: 400px;
+        }
+
+        @include mobile {
+            top: -143px;
+        }
+    }
+
+    #{&}__items {
+        @include displayFlex(center, center, row);
+        flex-wrap: wrap;
+        max-width: 650px;
+
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+            background-image: url('../../assets/img/curly-arrows.svg');
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: 10% 50%;
+        }
+        
+        &::before {
+            left: 0;
+            transform: rotateY(180deg);
+        }
+        
+        &::after {
+            right: 0;
+        }
+
+        @include mobile {
+            &::after, &::before {
+                display: none;
+            }
+        }
+    }
+
+    @include tablet {
+        @include displayFlex(center, center, column);
+    }
+}

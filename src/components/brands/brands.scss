@@ -24,6 +24,7 @@
     #{&}__cards {
         width: 95%;
         margin-right: 0%;
+        min-height: 200px;
         @include displayFlex(center, center, column);
 
         @include tablet {
@@ -57,6 +58,25 @@
     .nav-item.active {
         color: getColor( 'primary' );
         background-color: getColor( 'secondary' );
+    }
+
+    /** Inputs **/
+    .brands__search {
+        width: 100%;
+        border: 1px solid #ced4da;
+        border-right: none;
+        border-left: none;
+    }
+
+    .input-addon {
+        background: getColor( 'primary' );
+    }
+    
+    .input-addon, .input-search {
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        border: none;
     }
 
     @include tablet {

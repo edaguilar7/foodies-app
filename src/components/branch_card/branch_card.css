@@ -60,4 +60,16 @@
     margin-left: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .branch-card {
+    max-height: 125px;
+  }
+  .branch-card .branch-card__schedule, .branch-card .branch-card__location {
+    font-size: 14px;
+  }
+  .branch-card .branch-card__name {
+    font-size: 18px;
+  }
+}
 /*# sourceMappingURL=branch_card.css.map */

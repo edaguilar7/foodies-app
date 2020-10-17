@@ -12,3 +12,8 @@ export { default as Opinions } from './opinions';
 export { default as ContactUs } from './contact-us';
 export { default as ContactForm } from './contact-form';
 export { default as InfoGroup } from './info-group';
+export { default as Benefits } from './benefits';
+export { default as BenefitItem } from './benefit-item';
+export { default as Loading } from './loading';
+export { default as LocationNotFound } from './locations-not-found';
+export { default as Thanks } from './thanks';

@@ -1,0 +1,36 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+.thanks{
+    width: 715px;
+    @include displayFlex(center, center, column);
+    margin: 0.5em auto;
+
+    #{&}__picture {
+        max-width: 100px;
+    }
+
+    #{&}__title {
+        font-family: Druk Text Wide;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+        color: getColor( 'primary' );
+    }
+
+    #{&}__description {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: getColor( 'primary' );
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}

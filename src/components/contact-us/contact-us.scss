@@ -6,10 +6,31 @@
     @include displayFlex(center, center, column);
     width: 100%;
     padding-top: 90px;
+    padding-bottom: 70px;
     position: relative;
     top: 320px;
     background: getColor( 'secondary' );
     color: getColor( 'primary' );
+
+    #{&}__goTo {
+        width: 216px;
+        height: 50px;
+        background: #FFD600;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: getColor( 'secondary' );
+        @include transition-ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 
     @include mobile {
         top: 0;
