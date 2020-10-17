@@ -7,9 +7,9 @@ const { Feedback } = Control
 const ContactForm = ({ getSubmitResponse, loading }) => {
     const [validated, setValidated] = useState(false);
     const [values, setValues] = useState({
-        name: null,
-        email: null,
-        message: null
+        name: '',
+        email: '',
+        message: ''
     })
 
     const handleSubmit = (event) => {
@@ -37,7 +37,6 @@ const ContactForm = ({ getSubmitResponse, loading }) => {
                         name="name"
                         type="text"
                         placeholder="Mi nombre es"
-                        defaultValue=""
                         value={name}
                         onChange={handleChange}
                     />
@@ -49,7 +48,6 @@ const ContactForm = ({ getSubmitResponse, loading }) => {
                         required
                         name="email"
                         type="email"
-                        defaultValue=""
                         placeholder="Mi correo electrónico es"
                         value={email}
                         onChange={handleChange}

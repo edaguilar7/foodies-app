@@ -7,12 +7,19 @@
     position: relative;
     top: 350px;
     #{&}__picture {
+        height: 1100px;
         position: absolute;
-        top: -110px;
+        top: -350px;
         z-index: 1;
 
+        @include tablet {
+            height: 800px;
+            top: -290px;
+        }
+
         @include mobile {
-            top: -375px;
+            height: 600px;
+            top: -535px;
         }
     }
 
@@ -29,7 +36,7 @@
         }
 
         @include mobile {
-            top: -143px;
+            top: 0px;
         }
     }
 

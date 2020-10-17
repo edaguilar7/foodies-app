@@ -45,7 +45,7 @@ const Brands = (props) => {
             setLoading(true)
             setLocations([])
             const response = await axios.get(
-                getLocations(activeKey.toLowerCase(), encodeURI(searchText))
+                getLocations(activeKey.toLowerCase(), encodeURI(searchText || ''))
             )
             const result = processResponse(response);
             if (result.ok) setLocations(result.payload);

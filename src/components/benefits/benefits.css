@@ -5,14 +5,23 @@
 }
 
 .benefits .benefits__picture {
+  height: 1100px;
   position: absolute;
-  top: -110px;
+  top: -350px;
   z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .benefits .benefits__picture {
+    height: 800px;
+    top: -290px;
+  }
 }
 
 @media (max-width: 768px) {
   .benefits .benefits__picture {
-    top: -375px;
+    height: 600px;
+    top: -535px;
   }
 }
 
@@ -46,7 +55,7 @@
 
 @media (max-width: 768px) {
   .benefits .benefits__info {
-    top: -143px;
+    top: 0px;
   }
 }
 

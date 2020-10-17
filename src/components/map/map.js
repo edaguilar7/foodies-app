@@ -25,5 +25,5 @@ const Map = ({ isMarkerShown, position, google }) => {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyByGZOo09v4DtgdVsEwudHzF_O_6QtC4LY'
+    apiKey: ''
 })(Map)

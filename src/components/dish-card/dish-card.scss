@@ -1,0 +1,45 @@
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.card {
+    width: 33%;
+    max-width: 320px;
+    margin: 0.5em;
+
+    #{&}__footer {
+        background-color: getColor( 'primary' );
+        width: 100%;
+        @include displayFlex(space-between, center, row);
+
+        #{&}__category {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #78909C;
+        }
+
+        #{&}__price {
+            color: #000000;
+            width: 93px;
+            height: 28px;
+            background: #FFD600;
+            border-radius: 8px;
+            text-align: center;
+            font-family: Druk Text Wide;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px
+        }
+    }
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}

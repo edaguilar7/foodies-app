@@ -50,8 +50,8 @@ const Opinions = () => {
                             ref={carouselRef}
                         >
                             {
-                                feedbackList.map(({ title, description }) => (
-                                    <div style={{ width: '100%' }}>
+                                feedbackList.map(({ title, description }, index) => (
+                                    <div key={index} style={{ width: '100%' }}>
                                         <Title style={{ maxWidth: '744px', textAlign: 'center' }} text={title} />
                                         <Paragraph style={{ maxWidth: '490px', textAlign: 'center', margin: 'auto', marginTop: '20px' }} text={description} />
                                     </div>

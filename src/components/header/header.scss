@@ -45,6 +45,10 @@
         };
     }
 
+    #{&}__link {
+        color: inherit;
+    }
+
     #{&}__sideBar {
         display: none;
         background: getColor( 'secondary' );
@@ -121,12 +125,12 @@
 
     @include tablet {
         width: 595.38px;
-        height: 650px;
+        height: 600px;
     }
 
     @include mobile {
         max-width: 100%;
         width: 455px;
-        height: 497px;
+        max-height: 462px;
     }
 }

@@ -1,0 +1,58 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+.dishes {
+    margin-top: 500px;
+    padding-bottom: 100px;
+    width: 100%;
+    @include displayFlex(center, center, column);
+
+    #{&}__params {
+        width: 100%;
+        @include displayFlex(center, center, row);
+    }
+
+    #{&}__options {
+        @include displayFlex(center, center, row);
+    }
+
+    #{&}__cards {
+        margin-top: 50px;
+        width: 100%;
+        @include displayFlex(center, center, row);
+        flex-wrap: wrap;
+    }
+    
+    #{&}__category {
+        margin: 0.2em 1em;
+        font-family: Syne;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    @include tablet {
+        margin-top: 275px;
+        #{&}__params {
+            @include displayFlex(center, center, column);
+        }
+    }
+
+    @include mobile {
+        margin-top: 0px;
+        #{&}__params {
+            @include displayFlex(center, center, column);
+        }
+
+        #{&}__options {
+            @include displayFlex(center, center, column);
+        }
+
+        #{&}__category {
+            margin: 0.3em auto;
+        }
+    }
+}

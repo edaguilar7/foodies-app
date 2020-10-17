@@ -1,0 +1,69 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+.footer {
+    position: relative;
+    width: 100%;
+    top: 500px;
+    @include displayFlex(center, center, column);
+
+    @include tablet {
+        top: 800px;
+    }
+
+    @include mobile {
+        top: 400px;
+    }
+
+    #{&}__stores {
+        width: 100%;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #FFC700;
+        @include displayFlex(space-between, center, row);
+        & > h3 {
+            margin-left: 50px;
+        }
+
+        @include mobile {
+            @include displayFlex(center, center, column);
+        }
+    }
+
+
+    #{&}__pictures {
+        width: 450px;
+        @include displayFlex(space-around, center, row);
+        & > img {
+            width: 185px;
+        }
+
+        @include mobile {
+            width: 100%;
+            & > img {
+                width: 140px;
+                // margin: 0.1em 0.3em;
+            }
+        }
+    }
+
+    #{&}__options {
+        width: 90%;
+        margin: auto;
+        list-style: none;
+        @include displayFlex(center, center, row);
+
+        @include mobile {
+            @include displayFlex(center, center, column);
+        }
+    }
+
+    #{&}__item {
+        // font-family: Roboto;
+        margin: 0.2em 0.6em;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+}

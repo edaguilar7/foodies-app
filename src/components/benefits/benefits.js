@@ -1,7 +1,7 @@
 import React from 'react';
 import './benefits.css';
 import { Title, BenefitItem } from '../';
-import Mobile from '../../assets/img/mobile-phone.svg';
+import Mobile from '../../assets/img/new.svg';
 
 const Benefits = () => {
     return (

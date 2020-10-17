@@ -18,7 +18,7 @@ const Title = ({
 Title.propTypes = {
     theme: PropTypes.string,
     style: PropTypes.object,
-    text: PropTypes.string.isRequired
+    text: PropTypes.any
 }
 
 export default Title

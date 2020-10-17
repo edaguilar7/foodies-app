@@ -17,3 +17,6 @@ export { default as BenefitItem } from './benefit-item';
 export { default as Loading } from './loading';
 export { default as LocationNotFound } from './locations-not-found';
 export { default as Thanks } from './thanks';
+export { default as Footer } from './footer';
+export { default as Dishes } from './dishes';
+export { default as DishCard } from './dish-card';

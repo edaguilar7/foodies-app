@@ -18,7 +18,7 @@ const LandingInfo = () => {
 
                 <SubTitle
                     hasArrow
-                    style={{ width: '100%', marginTop: '50px' }}
+                    style={{ width: '100%', marginTop: '50px', marginBottom: '1em' }}
                     text={'Encuentranos'} 
                 />
             </div>
