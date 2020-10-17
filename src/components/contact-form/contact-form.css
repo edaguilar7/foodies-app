@@ -56,6 +56,8 @@
 }
 
 .contact-form .contact-form__bottom > button {
+  position: relative;
+  z-index: 100;
   color: #000 !important;
   font-weight: bold;
   background: #FFC700 !important;
@@ -106,6 +108,8 @@
 }
 
 .contact-form .form-group > .form-control {
+  position: relative;
+  z-index: 100;
   color: #FFC700;
   background: #000;
   font-family: Open Sans;

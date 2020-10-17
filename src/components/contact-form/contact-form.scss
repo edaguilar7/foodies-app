@@ -21,6 +21,8 @@
         @include displayFlex(flex-end, center, row);
 
         & > button {
+            position: relative;
+            z-index: 100;
             color: getColor( 'secondary' ) !important;
             font-weight: bold;
             background: getColor( 'golden' ) !important;
@@ -55,6 +57,8 @@
         }
 
         & > .form-control {
+            position: relative;
+            z-index: 100;
             color: getColor( 'golden' );
             background: getColor( 'secondary' );
             font-family: Open Sans;
